@@ -13,16 +13,17 @@ The Transformer model relies entirely on self-attention mechanisms to draw globa
 ### Mathematical Representation
 
 **Self-Attention:**
-The self-attention mechanism in the Transformer computes the response at a position in a sequence by attending to all positions and taking their weighted average. Mathematically, it can be described as follows:
+The self-attention mechanism in the Transformer computes the response at a position in a sequence by attending to all positions and taking their weighted average. The self-attention can be mathematically described as follows:
 
-\[ \text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right) V \]
+`Attention(Q, K, V) = softmax((QK^T) / sqrt(d_k)) * V`
 
-where \(Q\), \(K\), and \(V\) are the query, key, and value matrices derived from the input, and \(d_k\) is the dimension of the key vectors.
+where `Q`, `K`, and `V` are the query, key, and value matrices derived from the input, and `d_k` is the dimension of the key vectors.
 
 **Position-wise Feed-Forward Networks:**
-Each layer of the Transformer contains a fully connected feed-forward network which is applied to each position separately and identically. This consists of two linear transformations with a ReLU activation in between:
+Each layer of the Transformer contains a fully connected feed-forward network, which is applied to each position separately and identically. This network includes two linear transformations with a ReLU activation in between:
 
-\[ \text{FFN}(x) = \max(0, xW_1 + b_1)W_2 + b_2 \]
+`FFN(x) = max(0, xW_1 + b_1)W_2 + b_2`
+
 
 
 ## Contributors
