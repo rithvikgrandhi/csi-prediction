@@ -56,5 +56,5 @@ The LSTM model provides a robust framework for predicting CSI, aiding in the opt
 
 ## Contributors
 
-- Rohit Viswam
-- Rithvik Grandhi
+- Rohit Viswam (email: rohitviswam@gmail.com)
+- Rithvik Grandhi(email: grandhirithwik@gmail.com)
