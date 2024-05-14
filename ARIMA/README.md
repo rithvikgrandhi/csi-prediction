@@ -64,6 +64,12 @@ Performance is assessed using the Root Mean Squared Error (RMSE), offering insig
 RMSE = sqrt(MSE)
 ```
 
+
+## Contributors
+
+- Rohit Viswam
+- Rithvik Grandhi
+
 ## Conclusion
 
 This project demonstrates the application of ARIMA for forecasting CSI in wireless communication. This predictive capability aids in proactive system adjustments for enhanced communication quality.
