@@ -102,3 +102,10 @@ def evaluate_model(model, inputs, targets):
 ## Conclusion
 
 The iTransformer model, with its ability to handle high-dimensional time series data, is used to predict future channel states effectively, providing essential insights for optimizing communication channels in wireless networks.
+
+
+## Contributors
+
+- Rohit Viswam (email:rohitviswam@gmail.com)
+- Rithvik Grandhi(email:grandhirithwik@gmail.com)
+
