@@ -14,21 +14,25 @@ LSTMs are designed to handle the sequential nature of CSI data, where the past a
 ### LSTM Equations
 1. **Forget Gate**:
    - Determines parts of the cell state to discard.
-   - \( f_t = \sigma(W_f \cdot [h_{t-1}, x_t] + b_f) \)
+   - `f_t = sigma(W_f * [h_(t-1), x_t] + b_f)`
+     - Where `sigma` denotes the sigmoid function, `W_f` are the weights of the forget gate, `h_(t-1)` is the output from the previous timestep, `x_t` is the current input, and `b_f` is the bias.
 
 2. **Input Gate**:
    - Decides which values to update in the cell state.
-   - \( i_t = \sigma(W_i \cdot [h_{t-1}, x_t] + b_i) \)
-   - \( \tilde{C}_t = \tanh(W_C \cdot [h_{t-1}, x_t] + b_C) \)
+   - `i_t = sigma(W_i * [h_(t-1), x_t] + b_i)`
+   - `C~_t = tanh(W_C * [h_(t-1), x_t] + b_C)`
+     - Where `C~_t` represents the candidate values for state update, computed by applying a `tanh` activation function to ensure the values stay between -1 and 1.
 
 3. **Cell State Update**:
    - Updates the cell state for time step t.
-   - \( C_t = f_t \ast C_{t-1} + i_t \ast \tilde{C}_t \)
+   - `C_t = f_t * C_(t-1) + i_t * C~_t`
+     - Combines the past cell state `C_(t-1)` multiplied by the forget gate's output `f_t` (forgetting old information) with the input gate's output `i_t` multiplied by the candidate values `C~_t` (adding new information).
 
 4. **Output Gate**:
    - Determines the next hidden state.
-   - \( o_t = \sigma(W_o \cdot [h_{t-1}, x_t] + b_o) \)
-   - \( h_t = o_t \ast \tanh(C_t) \)
+   - `o_t = sigma(W_o * [h_(t-1), x_t] + b_o)`
+   - `h_t = o_t * tanh(C_t)`
+     - Where `o_t` is the activation of the output gate, controlling how much of the cell state to pass to the output, and `h_t` is the final output of the LSTM cell at time t.
 
 ### Model Details
 - The model inputs CSI data from the past sequences to predict the future state of the channel.
