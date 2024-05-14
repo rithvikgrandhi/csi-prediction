@@ -13,14 +13,14 @@ TCNs use a series of causal convolutions to ensure that the prediction for the c
 ### Mathematical Representation
 
 **Causal Convolutions:**
-Causal convolutions ensure that the model does not violate the temporal order of data, meaning the output at time \( t \) is convolved only with elements from time \( t \) or earlier.
+Causal convolutions ensure that the model does not violate the temporal order of data. This means that the output at time `t` is calculated only from elements from time `t` or earlier.
 
 **Dilated Convolutions:**
-Dilated convolutions introduce gaps in the convolution kernel to cover a larger receptive field without increasing the number of parameters. The dilation factor increases exponentially with the depth of the network:
+Dilated convolutions introduce gaps in the convolution kernel to cover a larger receptive field without increasing the number of parameters. The dilation factor increases exponentially with the depth of the network. The equation for dilated convolutions is:
 
-\[ y(t) = (x * f_d)(t) = \sum_{s=0}^{k-1} f(s) \cdot x(t - ds) \]
+`y(t) = (x * f_d)(t) = sum from s=0 to k-1 of f(s) * x(t - ds)`
 
-where \( f_d \) is a dilated kernel, \( k \) is the kernel size, \( d \) is the dilation factor, \( x \) is the input, and \( y \) is the output.
+where `f_d` is a dilated kernel, `k` is the kernel size, `d` is the dilation factor, `x` is the input, and `y` is the output.
 
 
 ## Contributors
