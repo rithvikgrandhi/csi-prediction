@@ -74,6 +74,5 @@ This project demonstrates the application of XGBoost in predicting CSI, which is
 
 ## Contributors
 
-- Rohit Viswam
-- Rithvik Grandhi
-
+- Rohit Viswam (email: rohitviswam@gmail.com)
+- Rithvik Grandhi(email: grandhirithwik@gmail.com)
