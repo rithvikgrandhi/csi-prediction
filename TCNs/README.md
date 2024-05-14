@@ -25,5 +25,5 @@ where `f_d` is a dilated kernel, `k` is the kernel size, `d` is the dilation fac
 
 ## Contributors
 
-- Rohit Viswam
-- Rithvik Grandhi
+- Rohit Viswam (email: rohitviswam@gmail.com)
+- Rithvik Grandhi(email: grandhirithwik@gmail.com)
