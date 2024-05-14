@@ -28,6 +28,6 @@ Each layer of the Transformer contains a fully connected feed-forward network, w
 
 ## Contributors
 
-- Rohit Viswam
-- Rithvik Grandhi
+- Rohit Viswam (email: rohitviswam@gmail.com)
+- Rithvik Grandhi(email: grandhirithwik@gmail.com)
 
