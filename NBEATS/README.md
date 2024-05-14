@@ -29,5 +29,5 @@ where `f_theta` is the backcasting function.
 
 ## Contributors
 
-- Rohit Viswam
-- Rithvik Grandhi
+- Rohit Viswam (email: rohitviswam@gmail.com)
+- Rithvik Grandhi(email: grandhirithwik@gmail.com)
