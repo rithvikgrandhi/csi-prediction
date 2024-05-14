@@ -36,18 +36,3 @@ where `b_{ij}` are the log prior probabilities that capsule `i` should be couple
 - Rohit Viswam
 - Rithvik Grandhi
 
-
-## Citation
-
-If you find this work useful, please cite it as:
-
-```
-@misc{your_csi_capsnet_2024,
-  title={CSI Prediction with Capsule Networks},
-  author={rohitviswam,rithvikgrandhi},
-  year={2024},
-  publisher={GitHub},
-  journal={GitHub repository},
-  howpublished={\url{https://github.com/rithvikgrandhi/csi-prediction/tree/main/CapsNet}}
-}
-```
