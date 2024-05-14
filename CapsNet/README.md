@@ -33,6 +33,5 @@ where `b_{ij}` are the log prior probabilities that capsule `i` should be couple
 
 ## Contributors
 
-- Rohit Viswam
-- Rithvik Grandhi
-
+- Rohit Viswam (email: rohitviswam@gmail.com)
+- Rithvik Grandhi(email: grandhirithwik@gmail.com)
