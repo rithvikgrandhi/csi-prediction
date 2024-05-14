@@ -45,11 +45,14 @@ where:
 
 2. **Loss Function**: The loss function used in XGBoost for regression tasks is the squared error, calculated as:
 
-   \[ L(y, \hat{y}) = (y - \hat{y})^2 \]
+```
+L(y, y_hat) = (y - y_hat)^2
+```
 
-   where:
-   - \( y \) is the actual value.
-   - \( \hat{y} \) is the predicted value.
+where:
+- `y` is the actual value.
+- `y_hat` is the predicted value.
+
 
 ## Usage
 
