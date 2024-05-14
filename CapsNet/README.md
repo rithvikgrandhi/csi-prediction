@@ -13,19 +13,22 @@ Capsule Networks, introduced by Sabour et al., offer a robust architecture for l
 
 Capsule Networks differ from traditional convolutional networks by using groups of neurons (capsules) that encode model parameters in a way that preserves more information about the input data's state. The dynamic routing mechanism between capsules allows the network to learn spatial hierarchies.
 
+
 ### Mathematical Representation
 
+**Squashing Function:**
 The squashing function used in CapsNet is given by:
 
-\[ v_j = \frac{{\|s_j\|^2}}{{1 + \|s_j\|^2}} \frac{{s_j}}{{\|s_j\|}} \]
+`v_j = (|s_j|^2 / (1 + |s_j|^2)) * (s_j / |s_j|)`
 
-where \( v_j \) is the vector output of capsule \( j \) and \( s_j \) is its total input.
+where `v_j` is the vector output of capsule `j` and `s_j` is its total input.
 
-The routing algorithm updates the coupling coefficients \( c_{ij} \) based on the agreement between the current output \( v_j \) and the prediction \( \hat{u}_{j|i} \) made by capsule \( i \):
+**Routing Algorithm:**
+The routing algorithm updates the coupling coefficients `c_{ij}` based on the agreement between the current output `v_j` and the prediction `u_hat_{j|i}` made by capsule `i`:
 
-\[ c_{ij} = \frac{{\exp(b_{ij})}}{{\sum_k \exp(b_{ik})}} \]
+`c_{ij} = exp(b_{ij}) / sum_k(exp(b_{ik}))`
 
-where \( b_{ij} \) are the log prior probabilities that capsule \( i \) should be coupled to capsule \( j \).
+where `b_{ij}` are the log prior probabilities that capsule `i` should be coupled to capsule `j`.
 
 
 ## Contributors
