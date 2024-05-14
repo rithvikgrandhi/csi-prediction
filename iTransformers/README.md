@@ -73,11 +73,11 @@ model = iTransformer(
 
 The iTransformer model relies on the self-attention mechanism, where the attention score is calculated as follows:
 
-\[ \text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V \]
+`Attention(Q, K, V) = softmax((QK^T) / sqrt(d_k)) * V`
 
 Where:
-- \( Q \), \( K \), and \( V \) are the query, key, and value matrices derived from the input.
-- \( d_k \) is the dimension of the keys.
+- `Q`, `K`, and `V` are the query, key, and value matrices derived from the input.
+- `d_k` is the dimension of the keys.
 
 ## Evaluation
 
