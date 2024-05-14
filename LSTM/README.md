@@ -53,6 +53,8 @@ The model's performance is evaluated using Mean Squared Error (MSE) between the 
 ## Conclusion
 The LSTM model provides a robust framework for predicting CSI, aiding in the optimization of wireless networks. Future work could explore deeper architectures or hybrid models to further enhance prediction accuracy.
 
----
 
-This README file provides a comprehensive guide to understanding, setting up, and using the LSTM model for CSI prediction, targeting both technical audiences and project collaborators.
+## Contributors
+
+- Rohit Viswam
+- Rithvik Grandhi
