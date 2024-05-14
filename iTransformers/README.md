@@ -106,6 +106,6 @@ The iTransformer model, with its ability to handle high-dimensional time series 
 
 ## Contributors
 
-- Rohit Viswam (email:rohitviswam@gmail.com)
-- Rithvik Grandhi(email:grandhirithwik@gmail.com)
+- Rohit Viswam (email: rohitviswam@gmail.com)
+- Rithvik Grandhi(email: grandhirithwik@gmail.com)
 
