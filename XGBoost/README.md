@@ -70,3 +70,10 @@ The model's performance is evaluated using the root mean squared error (RMSE), p
 ## Conclusion
 
 This project demonstrates the application of XGBoost in predicting CSI, which is vital for the optimization of wireless communication systems. The model aids in understanding complex channel conditions, thus facilitating the dynamic adaptation of system parameters for improved communication quality.
+
+
+## Contributors
+
+- Rohit Viswam
+- Rithvik Grandhi
+
