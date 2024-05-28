@@ -22,7 +22,7 @@ data = EV_data
 del EV_data
 print(data.shape)
 
-# %%
+
 # Function to create sequences
 def create_sequences(data, n_steps_in, n_steps_out):
     X, y = [], []
@@ -43,7 +43,7 @@ print(f'X shape: {X.shape}, y shape: {y.shape}')
 # Split the data into train and test sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# %%
+
 # Define a function to create the advanced LSTM model with gradient clipping
 def create_model(dropout_rate=0.2, lstm_units=256, dense_units=512):
     model = Sequential()
@@ -65,7 +65,7 @@ def create_model(dropout_rate=0.2, lstm_units=256, dense_units=512):
     model.compile(optimizer=optimizer, loss='mse')
     return model
 
-# %%
+
 
 best_params = {
 
@@ -88,7 +88,7 @@ model = create_model(
 
 
 
-# %%
+
 
 history = model.fit(
     X_train, y_train,
@@ -98,7 +98,7 @@ history = model.fit(
     callbacks=[early_stopping, reduce_lr],
     verbose=1)
 
-# %%
+
 test_loss = model.evaluate(X_test, y_test, verbose=1)
 print(f"Test Loss: {test_loss}")
 

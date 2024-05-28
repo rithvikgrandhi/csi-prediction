@@ -1,13 +1,13 @@
-# %%
+
 import scipy.io
 import numpy as np
 
 # Load the .mat file
-file_path = '/Users/rohitviswam/Desktop/IITM Mat file/EV_Rank_1_52_RBs_50_UEs_1000_snaps.mat'
+
+file_path = '../../EV_Rank_1_52_RBs_50_UEs_1000_snaps.mat'
 data = scipy.io.loadmat(file_path)
 # Extract the relevant data
 data = data['EV_re_im_split']
-
 feature_len=832
 
 
@@ -19,7 +19,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
 
 
-# %%
+
 import numpy as np
 import torch
 
@@ -65,7 +65,7 @@ print("Input shape:", inputs.shape)   # Expected shape: (samples, 10, 256)
 print("Target shape:", targets.shape) # Expected shape: (samples, 256)
 
 
-# %%
+
 import torch
 import torch.nn as nn
 from iTransformer import iTransformer
@@ -91,12 +91,12 @@ model = iTransformer(
 
 
 
-# %%
+
 # Print the architecture by directly printing the model object
 print(model)
 
 
-# %%
+
 # Define training settings
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model.to(device)
@@ -132,7 +132,7 @@ for epoch in range(epochs):
     print(f"Epoch {epoch+1}/{epochs}, Loss: {epoch_loss / num_batches:.4f}")
 
 
-# %%
+
 import pandas as pd
 
 def tabulate_predictions(inputs, targets, model, forecast_len=1, batch_size=64):
@@ -177,7 +177,7 @@ results_df = tabulate_predictions(inputs, targets, model, forecast_len=1, batch_
 print(results_df.head())  # Print the first few rows to verify
 
 
-# %%
+
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -232,7 +232,7 @@ def plot_predictions(inputs, targets, model, forecast_len=1, num_samples=10, bat
 plot_predictions(inputs, targets, model, forecast_len=1, num_samples=2, batch_size=64)
 
 
-# %%
+
 import torch
 import torch.nn.functional as F
 from sklearn.metrics import r2_score
@@ -276,6 +276,3 @@ print(f"Mean Squared Error (MSE): {mse}")
 print(f"Root Mean Squared Error (RMSE): {rmse}")
 print(f"Mean Absolute Error (MAE): {mae}")
 print(f"R-squared: {r2}")
-
-
-# %%

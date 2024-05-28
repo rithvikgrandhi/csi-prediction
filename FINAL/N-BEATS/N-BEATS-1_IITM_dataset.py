@@ -1,4 +1,4 @@
-# %%
+
 import scipy.io
 import numpy as np
 
@@ -15,17 +15,17 @@ import xgboost as xgb
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
 
-# %%
+
 data_flattened = data.reshape(data.shape[0], -1)  # shape becomes (2100, 398*256)
 
 
-# %%
+
 data = data_flattened
 
-# %%
+
 data.shape
 
-# %%
+
 import numpy as np
 
 # Assuming `data` is your loaded dataset with shape (2100, 101888)
@@ -65,7 +65,7 @@ print(f'Input shape after reshaping: {X.shape}')  # (num_sequences, input_length
 print(f'Target shape after reshaping: {y.shape}')  # (num_sequences, target_length, 1)
 
 
-# %%
+
 import torch
 import torch.nn as nn
 import torch.optim as optim
@@ -149,7 +149,7 @@ for epoch in range(epochs):
 # Model is now trained; you can use it for inference or further evaluation.
 
 
-# %%
+
 import numpy as np
 from sklearn.metrics import mean_squared_error, mean_absolute_error
 import matplotlib.pyplot as plt
