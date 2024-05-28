@@ -95,14 +95,6 @@ def build_tcn_model(input_shape, num_blocks=2, num_filters=32, kernel_size=3, dr
 input_length = 10  # The number of previous time steps used for input
 num_features = 1  # Modify according to your dataset
 
-# Adjust `num_features` if your input sequences contain multiple features.
-model = build_tcn_model(input_shape=(input_length, num_features))
-
-model.summary()
-
-model.save('best_tcn_model.keras')
-
-
 
 import numpy as np
 from tensorflow.keras.callbacks import EarlyStopping, ModelCheckpoint
@@ -125,15 +117,3 @@ history = model.fit(
     batch_size=32,
     callbacks=[early_stopping, model_checkpoint]
 )
-
-
-import matplotlib.pyplot as plt
-
-plt.figure(figsize=(12, 6))
-plt.plot(history.history['loss'], label='Training Loss')
-plt.plot(history.history['val_loss'], label='Validation Loss')
-plt.xlabel('Epochs')
-plt.ylabel('Loss')
-plt.legend()
-plt.title('Model Loss History')
-plt.show()
