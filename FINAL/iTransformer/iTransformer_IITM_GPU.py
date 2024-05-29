@@ -4,7 +4,7 @@ import numpy as np
 
 # Load the .mat file
 
-file_path = '../../EV_Rank_1_52_RBs_50_UEs_1000_snaps.mat'
+file_path = 'EV_Rank_1_52_RBs_50_UEs_1000_snaps.mat'
 data = scipy.io.loadmat(file_path)
 # Extract the relevant data
 data = data['EV_re_im_split']
